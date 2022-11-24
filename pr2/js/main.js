@@ -42,10 +42,34 @@ $(function(){
         var hString = "";
         for (var i=0; i<10; i++){
             var title = jsondata.Search[i].Title;
-            hString +="<li>"+title+"</li>"
+            var poster = jsondata.Search[i].Poster
+            
+            var year = jsondata.Search[i].Year
+            
+
+
+
+
+
+
+            // for (var j =0; j<4;j++){
+            //     var poster = title.Poster
+            //     var tit = title.Title
+            //     var year = title.Year
+                
+                
+            // } 
+            
+            hString +="<div>"+ '<img ' + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p>"+ year+"</p>"+"</div>"
+
+            
+            
 
 
         }
+        console.log(hString)
+
+
         $("#results").html(hString)
 
     }
