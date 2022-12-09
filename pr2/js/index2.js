@@ -53,7 +53,7 @@ $(function(){
                 
             // } 
             
-            hString +="<div>"+ '<img ' + 'src = "'+getPoster+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p>"+ year+"</p>"+"</div>"
+            hString +="<div>"+ '<img class = "posterImage" ' + 'src = "'+getPoster+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p class = 'relDate'>"+ year+"</p>"+"</div>"
 
             
             
