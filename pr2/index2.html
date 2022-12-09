@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <script>var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.themoviedb.org/4/account/%7Baccount_id%7D/movie/favorites?page=1",
+        "method": "GET",
+        "headers": {
+          "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNzY5YjJiOWUwNmYzZjA0MzFhOWJkNmI3ZDQ2NTc1ZSIsInN1YiI6IjYzOTI0ZWNmMjgzZWQ5MDA3ZmNiYTM0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3tSWUqcrWYMSXuxgyTA59jQUPsbnCQBBaaecGOwc9-E"
+        },
+        "data": "{}"
+      }
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });</script>
+    
+</body>
+</html>
