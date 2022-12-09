@@ -34,7 +34,7 @@ $(function(){
 
 
         })
-        pageNum += 1
+       
         
 
 
