@@ -62,8 +62,8 @@ $(function(){
             
     
             
-            hString +="<div>"+ '<img class = "posterImage" ' + 'src = "'+getPoster+ poster+ '"' +'>'
-            +"<p>"+title+"</p>"+ "<p id = '"+id+"'></p>"+'<p class = "mDesc">'+overview+'</p>'+"</div>"
+            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" ' + 'src = "'+getPoster+ poster+ '"' +'>'
+            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+"</div>"
             
 
 
@@ -76,7 +76,7 @@ $(function(){
         
 
 
-        $("#results").html(hString)
+        $("#resultsbox").html(hString)
     }
     function countDown(date, id){
         // Set the date we're counting down to
