@@ -44,7 +44,7 @@ $(function(){
 
     function printJSON (jsondata){
         //string to contain the html code to inject
-        pageNum = "the amount of pages is "+ jsondata.total_pages
+        pageNum = "The amount of pages is "+ jsondata.total_pages + ' enter the desired page number.'
         $("#amount").html(pageNum)
 
         var hString = "";
@@ -56,14 +56,16 @@ $(function(){
             var id = jsondata.results[i].id
             var overview = jsondata.results[i].overview
             var date = new Date(year).getTime()
-            
+            var vote  = jsondata.results[i].vote_average
+            var voteC  = jsondata.results[i].vote_count
             
             countDown(date, id)
             
     
             
             hString +="<div class = 'resultM'>"+ '<img class = "posterImage" ' + 'src = "'+getPoster+ poster+ '"' +'>'
-            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+"</div>"
+            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
+            "<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
 

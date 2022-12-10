@@ -1,4 +1,39 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+#amount{
+  font-size: x-large;
+}
+
+.title{
+  font-size: xx-large;
+}
+
+.mDesc{
+  display: block;
+  
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: large;
+
+}
+
+p{
+  color: wheat;
+
+
+}
+
+#base {
+  
+  background-color: #1b4bab; /* Used if the image is unavailable */
+  
+}
+.release{
+  float: left;
+  width: 50%;
+}
+
 .title{
   float: left;
 }
@@ -6,11 +41,13 @@
   display: -webkit-flex; /* Safari */
     display:grid;
     margin: 10px;
+    align-items: flex-start;
 }
 #resultsbox {
   display: -webkit-flex; /* Safari */
   display: grid;
   margin: 10px;
+  align-items: flex-start
   }
   
 .resultM {
