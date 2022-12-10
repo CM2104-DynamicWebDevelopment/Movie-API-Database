@@ -1,0 +1,45 @@
+
+.stitle{
+    font-size: xx-large;
+    color: rgb(255, 234, 0);
+
+}
+body{
+    display: grid;
+}
+
+#sBase {
+  
+    background-color: #1b4bab; /* Used if the image is unavailable */
+    
+}
+#resuktsbox{
+    display: -webkit-flex; /* Safari */
+    display: grid;
+    
+    
+}
+#results{ 
+    display: -webkit-flex; /* Safari */
+    display: grid;
+    width: 100%;
+    
+    }
+
+#Search{
+    max-width: 500px;
+    margin: auto;
+    
+    
+}
+#searchterms, #searchButt{
+    margin-top: 50px;
+    
+}
+h1{
+    
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    color: rgb(255, 234, 0);
+}

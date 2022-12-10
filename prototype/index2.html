@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/trending.js"></script>
+  <link rel="stylesheet" href="css/trend.css">
 	<!-- these scripts are meant to be ran individually just uncomment the one you want to investigate.
 They are in order of progression-->
 
@@ -28,8 +30,8 @@ They are in order of progression-->
 		  </div>
 		  <div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-			  <li class="active"><a href="#">Home</a></li>
-			  <li><a href="#">About</a></li>
+			  <li class="active"><a href="index2.html">Trending and Upcoming</a></li>
+			  <li><a href="index.html">SMovie Search</a></li>
 			  <li><a href="#">Projects</a></li>
 			  <li><a href="#">Contact</a></li>
 			</ul>
@@ -43,6 +45,7 @@ They are in order of progression-->
 
 
 	  <section class = "release">
+		<h1 class="headers">The Upcoming Movies</h1>
 		<p id="amount"></p>
 		<form id="getfotm">
 		<input type="text" id="pageNum">
@@ -53,8 +56,19 @@ They are in order of progression-->
 			
 		</div>
 		</section>
-		<section>
-<div id="trending"></div>
+		<section class="trelease">
+			<h1 class="headers">Trending Movies Today</h1>
+			<p id="tamount"></p>
+			<form id="tgetfotm">
+				<input type="text" id="tpageNum">
+				<input type="submit" value="tpageNum">
+			</form>
+			
+		<div id="trending"></div>
+
+		
+	
+	  	
 
 		</section>
 

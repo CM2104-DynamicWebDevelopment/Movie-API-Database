@@ -1,0 +1,56 @@
+#tamount{
+    font-size: x-large;
+  }
+  
+  .ttitle{
+    font-size: xx-large;
+    float: right;
+  }
+  
+  .tmDesc{
+    display: block;
+    
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: large;
+  
+  }
+  
+  
+  
+ 
+  .trelease{
+    float: right;
+    width: 45%;
+    display: -webkit-flex; /* Safari */
+      display:grid;
+      margin: 10px;
+      align-items: flex-start;
+  }
+  
+  
+  #trending {
+    display: -webkit-flex; /* Safari */
+    display: grid;
+    margin: 10px;
+    align-items: flex-start
+    }
+    
+  .tresultM {
+      display: -webkit-flex; /* Safari */
+      display: grid;
+      margin: 10px;
+    }
+    
+  
+  .tposterImage{
+      border-radius: 8px;
+      width: 150px;
+      height: 250px;
+      margin: 10px;
+  
+  
+  }
+  
