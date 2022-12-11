@@ -1,7 +1,5 @@
 $(function(){
 
-    
-
     //setting the url to get the poster by attaching the poster location variable to this url
     var pageNum;
     const getPoster = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'
@@ -33,7 +31,6 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             printJSON(jsondata)
-            console.log(jsondata)
 
 
         })
@@ -61,15 +58,13 @@ $(function(){
             var date = new Date(year).getTime()
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
-            var newTitle = undefined(title)
-            var new_poster = nullPoster(poster)
             
             countDown(date, id)
             
     
             
-            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" ' + 'src = "'+new_poster+ '"' +'>'
-            +"<p class = 'title'>"+newTitle+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
+            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+getPoster+ poster+ '"' +'>'
+            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
             "<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
@@ -126,21 +121,6 @@ $(function(){
 
 
     }
-
-    function undefined(title){
-        if (typeof title === 'undefined'){
-            return "No Title"
-            
-        }else{return title}
-    }
-
-    function nullPoster(poster){
-        if ( poster == null){
-            return "wallhaven-v9poql.jpg"
-            
-        }else{return getPoster+poster}
-    }
-
    
 
 

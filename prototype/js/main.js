@@ -62,7 +62,7 @@ $(function(){
                 
             // } 
             
-            hString +="<div>"+ '<img ' + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p>"+ year+"</p>"+"</div>"
+            hString +="<div class='border'>"+ '<img class="tposterImage"   '   + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p>"+ year+"</p>"+"</div>"
 
             
             

@@ -5,12 +5,12 @@
 
 }
 body{
-    display: grid;
+    display: grid;resultM
 }
 
 #sBase {
   
-    background-color: #1b4bab; /* Used if the image is unavailable */
+    background-color: #1B4BAB; /* Used if the image is unavailable */
     
 }
 #resuktsbox{
@@ -23,8 +23,23 @@ body{
     display: -webkit-flex; /* Safari */
     display: grid;
     width: 100%;
+
+    
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto   ;
+    background-color: #2196F3;
+    padding: 10px;
     
     }
+
+
+    @media only screen and (max-width: 1100px) {
+        #results{
+          margin-right: 0%;
+        width: 99%;
+        }
+      }
+    
 
 #Search{
     max-width: 500px;
