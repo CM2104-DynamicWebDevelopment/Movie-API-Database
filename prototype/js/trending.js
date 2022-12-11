@@ -27,7 +27,7 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             tprintJSON(jsondata)
-            console.log(tpageNum)
+           
 
 
         })
