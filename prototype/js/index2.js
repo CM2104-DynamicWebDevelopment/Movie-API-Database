@@ -58,13 +58,15 @@ $(function(){
             var date = new Date(year).getTime()
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
+            var newTitle = undefined(title)
+            var newImage = nullImage(poster)
             
             countDown(date, id)
             
     
             
-            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+getPoster+ poster+ '"' +'>'
-            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
+            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+newImage+ '"' +'>'
+            +"<p class = 'title'>"+newTitle+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
             "<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
@@ -121,6 +123,24 @@ $(function(){
 
 
     }
+    function undefined(title){
+        if (typeof title === 'undefined'){
+            return "No Title"
+        }else{return title}
+
+    
+
+
+
+
+    }
+
+    function nullImage(poster){
+        if (poster == null){
+            return "pexels-photo-7234378.jpeg"
+        }else{
+            return getPoster+poster
+        }}
    
 
 

@@ -5,15 +5,16 @@
 
 }
 body{
-    display: grid;resultM
+    display: grid;
 }
 
 #sBase {
   
-    background-color: #1B4BAB; /* Used if the image is unavailable */
-    
-}
-#resuktsbox{
+    background-color: #1b4bab; }
+
+
+
+    #resuktsbox{
     display: -webkit-flex; /* Safari */
     display: grid;
     

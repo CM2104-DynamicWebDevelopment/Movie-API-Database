@@ -55,13 +55,14 @@ $(function(){
             var date = new Date(year).getTime()
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
-            
+            var newTitle = undefined(title)
+            var newImage = nullImage(poster)
             
             
     
             
-            hString +="<div class = 'tresultM'>"+ '<img class = "tposterImage" ' + 'src = "'+posterURL+ poster+ '"' +'>'
-            +"<p class = 'ttitle'>"+title+"</p>"+ '<p class = "tmDesc">'+overview+'</p>'+
+            hString +="<div class = 'tresultM'>"+ '<img class = "tposterImage" ' + 'src = "'+newImage+ '"' +'>'
+            +"<p class = 'ttitle'>"+newTitle+"</p>"+ '<p class = "tmDesc">'+overview+'</p>'+
             "<p  id ='tvote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
@@ -77,6 +78,27 @@ $(function(){
 
         $("#trending").html(hString)
     }
+
+    function undefined(title){
+        if (typeof title === 'undefined'){
+            return "No Title"
+        }else{return title}
+
+    
+
+
+
+
+    }
+
+    function nullImage(poster){
+        if (poster == null){
+            return "wallhaven-v9poql.jpg"
+        }else{
+            return posterURL+poster
+        }
+    }
+    
 
 
 
