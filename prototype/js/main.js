@@ -1,4 +1,9 @@
 $(function(){
+    var plot;
+
+
+    // prepare the variables for the film description function 
+    
 
     // document ready
     //alert("ready")
@@ -19,13 +24,16 @@ $(function(){
     function getApiData(searchTearms){
         //url to be used 
 
+        
+
         var url = "http://www.omdbapi.com/?apikey=c4bea658&s=" + searchTearms;
 
         //use jquery json shortcut
 
         $.getJSON(url, function(jsondata){
-            console.log(jsondata)
+            
             printJSON(jsondata)
+            
 
 
         })
@@ -38,13 +46,24 @@ $(function(){
 
     function printJSON (jsondata){
         //string to contain the html code to inject
+        
 
         var hString = "";
         for (var i=0; i<10; i++){
+            
             var title = jsondata.Search[i].Title;
+            
             var poster = jsondata.Search[i].Poster
             
             var year = jsondata.Search[i].Year
+            var jsn = getApiplot(title)
+            var plot = jsn.Plot
+            
+            
+            
+            
+            
+            
 
             
             
@@ -62,19 +81,64 @@ $(function(){
                 
             // } 
             
-            hString +="<div class='border'>"+ '<img class="tposterImage"   '   + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+ "<p>"+ year+"</p>"+"</div>"
+            hString +="<div class='border'>"+ '<img class="tposterImage"   '   + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+"<p>"+plot+"</p>"+ "<p>"+ year+"</p>"+"</div>"
 
             
             
 
 
         }
-        console.log(hString)
+        
+        
 
 
         $("#results").html(hString)
 
     }
+
+    // new function to load the film descryption 
+
+    function getApiplot(title){
+        //url to be used 
+        
+
+        
+
+        var url = "http://www.omdbapi.com/?apikey=c4bea658&t=" + title;
+
+        //use jquery json shortcut
+        var data;
+
+        $.ajax({
+            async: false, //thats the trick
+            url: url,
+            dataType: 'json',
+            success: function(response){
+               data = response;
+            }
+        });
+
+        return data;
+       
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+    
+    }
+    
+    
+    
    
 
 
