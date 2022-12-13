@@ -31,7 +31,7 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             printJSON(jsondata)
-            console.log(jsondata)
+            
 
 
         })
