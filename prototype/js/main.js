@@ -34,6 +34,7 @@ $(function(){
             
             printJSON(jsondata)
             
+            
 
 
         })
@@ -58,30 +59,21 @@ $(function(){
             var year = jsondata.Search[i].Year
             var jsn = getApiplot(title)
             var plot = jsn.Plot
-            
-            
-            
-            
-            
-            
+            var id = jsn.imdbID
+            var vote = jsn.imdbRating
+            var voteC = jsn.imdbVotes
+            var date = new Date(year).getTime()
+            countDown(date, id)
 
             
             
-
-
-
-
-
-
-            // for (var j =0; j<4;j++){
-            //     var poster = title.Poster
-            //     var tit = title.Title
-            //     var year = title.Year
-                
-                
-            // } 
             
-            hString +="<div class='border'>"+ '<img class="tposterImage" '   + 'src = "'+ poster+ '"' +'>'+"<p class='title'>"+title+"</p>"+"<p class='serchdescrip'>"+plot+"</p>"+ "<p class='year'>"+ year+"</p>"+"</div>"
+            
+        
+            
+            hString +="<div class='border'>"+ '<img class="tposterImage" '   + 'src = "'+ poster+ '"' +'>'
+            +"<p class='title'>"+title+"</p>"+"<p class='serchdescrip'>"+plot+"</p>"+ "<p class='year'>"+ year+"</p>"+
+            "<p class ='countDown' id = '"+id+"'></p>"+"<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
 
             
             
@@ -135,6 +127,47 @@ $(function(){
         
         
     
+    }
+    function countDown(date, id){
+        // Set the date we're counting down to
+        var countDownDate = date ;
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // console.log(countDownDate)
+        // console.log(now)
+        
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+       
+        
+
+        // Display the result in the element with id="demo"
+        document.getElementById(id).innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById(id).innerHTML = "The Film is Out";
+        }
+        }, 1000);
+        
+
+        
+
+
+
     }
     
     

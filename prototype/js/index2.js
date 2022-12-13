@@ -31,7 +31,7 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             printJSON(jsondata)
-            console.log(jsondata)
+            
 
 
         })
@@ -61,15 +61,14 @@ $(function(){
             var voteC  = jsondata.results[i].vote_count
             var newTitle = undefined(title)
             var newImage = nullImage(poster)
-            console.log(year)
+           
             
             countDown(date, id)
             
     
             
             hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+newImage+ '"' +'>'
-            +"<p class = 'title'>"+newTitle+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
-            "<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
+            +"<p class = 'title'>"+newTitle+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+"<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
 
