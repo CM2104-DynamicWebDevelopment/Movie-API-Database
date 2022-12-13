@@ -20,6 +20,32 @@ body{
     
     
 }
+
+
+
+.serchdescrip{
+    display: block;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: large;
+
+  
+  }
+
+
+
+.year {
+
+font-size: 1vw;
+color: black;
+text-align: center;
+}
+
+
 #results{ 
     display: -webkit-flex; /* Safari */
     display: grid;
@@ -49,6 +75,7 @@ body{
     
 }
 #searchterms, #searchButt{
+    color: black;
     margin-top: 50px;
     
 }
