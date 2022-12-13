@@ -96,7 +96,7 @@ $(function(){
 
         
 
-        var url = "http://www.omdbapi.com/?apikey=c4bea658&t=" + title;
+        var url = "https://www.omdbapi.com/?apikey=c4bea658&t=" + title;
 
         //use jquery json shortcut
         var data;
