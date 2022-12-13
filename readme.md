@@ -25,6 +25,17 @@ Upcoming or already relacesd movie:
 - Votes ( likes ) based on imdb website
 the user can also cycle between thousands of pages where all the new moves are displayed.
 
+
 Trending page: this pages shows top 240 movies that are trending at the moment and updates live if there is any changes to the list.
+- Movie title
+- Movie descriotion 
+- Movie relase date / time 
+- Rating base on imdb website
+- Votes ( likes ) based on imdb website
 
 SMovies page: on this page you can search for any movie / tv series that has been already release or still to come it will give you a list of top 10 results most accurate to your search keyword
+- Movie title
+- Movie descriotion 
+- Movie relase date / time 
+- Rating base on imdb website
+- Votes ( likes ) based on imdb website
