@@ -26,3 +26,5 @@ Upcoming or already relacesd movie:
 the user can also cycle between thousands of pages where all the new moves are displayed.
 
 Trending page: this pages shows top 240 movies that are trending at the moment and updates live if there is any changes to the list.
+
+SMovies page: on this page you can search for any movie / tv series that has been already release or still to come it will give you a list of top 10 results most accurate to your search keyword
