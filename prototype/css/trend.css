@@ -13,6 +13,8 @@
   }
 
 
+  
+
 #tgetfotm {
    margin-left: 79.5%;
 }
@@ -35,7 +37,7 @@
   
  
   .trelease{
-    margin-left: 5%;
+    margin-left: 2.5%;
     width: 95%;
     display: -webkit-flex; /* Safari */
     display: grid;
@@ -44,7 +46,7 @@
   }
   
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1200px) {
     .trelease{
       margin-left: 0%;
     width: 100%;

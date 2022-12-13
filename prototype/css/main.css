@@ -12,11 +12,14 @@
 }
 
 .title{
-  font-size: xx-large;
-  float: left;
-  text-align: center;
+  
+    font-size: xx-large;
+    float: right;
+    height: 100px;
+    text-align: center;
 
-}
+  }
+
 
 
 #getfotm {
@@ -193,3 +196,25 @@ padding: 5px;
     }
     .row.content {height:auto;} 
   }
+
+  
+  #tvote {
+
+font-size: 1vw;
+color: rgb(0, 252, 0);
+
+  }
+
+  #vote {
+
+    font-size: 1vw;
+    color: rgb(0, 252, 0);
+    
+      }
+    
+
+      .countDown {
+
+        color: rgb(145, 0, 0);
+        font-size: 1.3vw;
+      }

@@ -81,7 +81,7 @@ $(function(){
                 
             // } 
             
-            hString +="<div class='border'>"+ '<img class="tposterImage"   '   + 'src = "'+ poster+ '"' +'>'+"<p>"+title+"</p>"+"<p>"+plot+"</p>"+ "<p>"+ year+"</p>"+"</div>"
+            hString +="<div class='border'>"+ '<img class="tposterImage"   '   + 'src = "'+ poster+ '"' +'>'+"<p class='title'>"+title+"</p>"+"<p class='tmDesc'>"+plot+"</p>"+ "<p>"+ year+"</p>"+"</div>"
 
             
             
