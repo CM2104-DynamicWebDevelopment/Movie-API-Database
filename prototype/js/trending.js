@@ -27,7 +27,7 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             tprintJSON(jsondata)
-            console.log(tpageNum)
+           
 
 
         })
@@ -45,7 +45,7 @@ $(function(){
         $("#tamount").html(tpageNum)
 
         var hString = "";
-        for (var i=0; i<20; i++){
+        for (var i=0; i<10; i++){
             var title = jsondata.results[i].original_title;
             var poster = jsondata.results[i].poster_path
             
