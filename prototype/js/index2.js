@@ -60,6 +60,7 @@ $(function(){
             var voteC  = jsondata.results[i].vote_count
             var newTitle = undefined(title)
             var newImage = nullImage(poster)
+            console.log(year)
             
             countDown(date, id)
             
