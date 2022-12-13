@@ -50,7 +50,7 @@ text-align: center;
     display: -webkit-flex; /* Safari */
     display: grid;
     width: 100%;
-
+    margin-left: 5%;;
     
     column-gap: 50px;
     grid-template-columns: auto auto auto auto   ;
