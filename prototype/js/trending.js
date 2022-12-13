@@ -45,7 +45,7 @@ $(function(){
         $("#tamount").html(tpageNum)
 
         var hString = "";
-        for (var i=0; i<10; i++){
+        for (var i=0; i<20; i++){
             var title = jsondata.results[i].original_title;
             var poster = jsondata.results[i].poster_path
             
