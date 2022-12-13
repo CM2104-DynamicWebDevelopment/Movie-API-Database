@@ -26,7 +26,7 @@ $(function(){
 
         
 
-        var url = "http://www.omdbapi.com/?apikey=c4bea658&s=" + searchTearms;
+        var url = "https://www.omdbapi.com/?apikey=c4bea658&s=" + searchTearms;
 
         //use jquery json shortcut
 
