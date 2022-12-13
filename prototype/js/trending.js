@@ -51,9 +51,9 @@ $(function(){
             var poster = jsondata.results[i].poster_path
             
             var year = jsondata.results[i].release_date
-            var id = jsondata.results[i].id
+            
             var overview = jsondata.results[i].overview
-            var date = new Date(year).getTime()
+            
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
             var newTitle = undefined(title)
