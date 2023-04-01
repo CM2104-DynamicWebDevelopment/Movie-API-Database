@@ -8,6 +8,10 @@ var app = express();
 app.use(express.static('public'))
 const bodyParser = require('body-parser'); //npm install body-parser
 
+//code to tell express we want to read POSTED forms
+app.use(bodyParser.urlencoded({
+    extended: true
+  }))
 
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
@@ -20,6 +24,9 @@ app.set('view engine', 'ejs');
 // });
 
 //variable to hold our Database
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 var db;
 
 //this is our connection to the mongo db, ts sets the variable db as our database
@@ -57,7 +64,7 @@ res.render('pages/login')
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 app.post('/dologin', function(req, res) {
-    console.log(JSON.stringify(req))
+    console.log(JSON.stringify(req.body))
     var uname = req.body.username;
     var pword = req.body.password;
     req.session.currentuser = uname;
