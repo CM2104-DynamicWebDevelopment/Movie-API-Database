@@ -43,7 +43,8 @@ app.get('/index2', function(req,res){
 });
 app.get('/trending', function(req,res){
     if(!req.session.loggedin){res.redirect('/login');return;}
-    res.render('pages/trending')
+    
+    res.render('pages/Trending')
 });
 
 // about page
