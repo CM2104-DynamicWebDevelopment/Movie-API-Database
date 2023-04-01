@@ -59,6 +59,30 @@ app.get('/login', function(req,res){
 
 res.render('pages/login')
 });
+app.get('/profile', function(req, res) {
+    if(!req.session.loggedin){res.redirect('/login');return;}
+    
+    
+    var uname = req.session.currentuser;
+    console.log(req.session.currentuser)
+    
+   
+    db.collection('people').findOne({"login.username": uname}, function(err, result) {
+      if (err) throw err;
+    
+  
+      console.log(result)
+     
+  
+  
+      res.render('pages/profile', {
+        
+        user: result
+        
+      })
+    });
+  
+  });
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
 
