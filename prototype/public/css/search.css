@@ -1,29 +1,55 @@
-
 .stitle{
     font-size: xx-large;
     color: rgb(255, 234, 0);
 
 }
 body{
-    display: grid;resultM
+    display: grid;
 }
 
 #sBase {
   
-    background-color: #1B4BAB; /* Used if the image is unavailable */
-    
-}
-#resuktsbox{
+    background-color: #1b4bab; }
+
+
+
+    #resuktsbox{
     display: -webkit-flex; /* Safari */
     display: grid;
     
     
 }
+
+
+
+.serchdescrip{
+    display: block;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: large;
+
+  
+  }
+
+
+
+.year {
+
+font-size: 1vw;
+color: black;
+text-align: center;
+}
+
+
 #results{ 
     display: -webkit-flex; /* Safari */
     display: grid;
     width: 100%;
-
+    margin-left: 5%;;
     
     column-gap: 50px;
     grid-template-columns: auto auto auto auto   ;
@@ -48,6 +74,7 @@ body{
     
 }
 #searchterms, #searchButt{
+    color: black;
     margin-top: 50px;
     
 }

@@ -27,7 +27,8 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             tprintJSON(jsondata)
-            console.log(tpageNum)
+            console.log(jsondata)
+           
 
 
         })
@@ -45,23 +46,24 @@ $(function(){
         $("#tamount").html(tpageNum)
 
         var hString = "";
-        for (var i=0; i<10; i++){
+        for (var i=0; i<20; i++){
             var title = jsondata.results[i].original_title;
             var poster = jsondata.results[i].poster_path
             
             var year = jsondata.results[i].release_date
-            var id = jsondata.results[i].id
+            
             var overview = jsondata.results[i].overview
-            var date = new Date(year).getTime()
+            
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
-            
+            var newTitle = undefined(title)
+            var newImage = nullImage(poster)
             
             
     
             
-            hString +="<div class = 'tresultM'>"+ '<img class = "tposterImage" ' + 'src = "'+posterURL+ poster+ '"' +'>'
-            +"<p class = 'ttitle'>"+title+"</p>"+ '<p class = "tmDesc">'+overview+'</p>'+
+            hString +="<div class = 'tresultM'>"+ '<img class = "tposterImage" ' + 'src = "'+newImage+ '"' +'>'
+            +"<p class = 'ttitle'>"+newTitle+"</p>"+ '<p class = "tmDesc">'+overview+'</p>'+
             "<p  id ='tvote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
@@ -78,7 +80,26 @@ $(function(){
         $("#trending").html(hString)
     }
 
-   
+    function undefined(title){
+        if (typeof title === 'undefined'){
+            return "No Title"
+        }else{return title}
+
+    
+
+
+
+
+    }
+
+    function nullImage(poster){
+        if (poster == null){
+            return "wallhaven-v9poql.jpg"
+        }else{
+            return posterURL+poster
+        }
+    }
+    
 
 
 

@@ -31,6 +31,7 @@ $(function(){
         $.getJSON(url, function(jsondata){
             
             printJSON(jsondata)
+            
 
 
         })
@@ -48,7 +49,7 @@ $(function(){
         $("#amount").html(pageNum)
 
         var hString = "";
-        for (var i=0; i<10; i++){
+        for (var i=0; i<20; i++){
             var title = jsondata.results[i].original_title;
             var poster = jsondata.results[i].poster_path
             
@@ -58,14 +59,16 @@ $(function(){
             var date = new Date(year).getTime()
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
+            var newTitle = undefined(title)
+            var newImage = nullImage(poster)
+           
             
             countDown(date, id)
             
     
             
-            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+getPoster+ poster+ '"' +'>'
-            +"<p class = 'title'>"+title+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+
-            "<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
+            hString +="<div class = 'resultM'>"+ '<img class = "posterImage" alt="poster" ' + 'src = "'+newImage+ '"' +'>'
+            +"<p class = 'title'>"+newTitle+"</p>"+ '<p class = "mDesc">'+overview+'</p>'+"<p class ='countDown' id = '"+id+"'></p>"+"<p  id ='vote'>"+'Rating '+vote+'<span>&#11088;</span>'+'<br>'+voteC+' votes'+"</p>"+"</div>"
             
 
 
@@ -101,7 +104,7 @@ $(function(){
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        console.log(pageNum)
+        
         
 
         // Display the result in the element with id="demo"
@@ -121,6 +124,24 @@ $(function(){
 
 
     }
+    function undefined(title){
+        if (typeof title === 'undefined'){
+            return "No Title"
+        }else{return title}
+
+    
+
+
+
+
+    }
+
+    function nullImage(poster){
+        if (poster == null){
+            return "pexels-photo-7234378.jpeg"
+        }else{
+            return getPoster+poster
+        }}
    
 
 
