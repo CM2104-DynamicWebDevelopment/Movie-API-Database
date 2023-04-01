@@ -56,6 +56,7 @@ app.get('/index', function(req,res){
 });
 
 app.get('/login', function(req,res){
+    if(req.session.loggedin){res.redirect('/logout');return;}
 
 res.render('pages/login')
 });
