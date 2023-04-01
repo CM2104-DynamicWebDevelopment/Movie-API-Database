@@ -3,6 +3,7 @@
 const MongoClient = require('mongodb').MongoClient; //npm install mongodb@2.2.32
 const url = "mongodb://localhost:27017/profiles";
 var express = require('express');
+const session = require('express-session'); //npm install express-session
 var app = express();
 app.use(express.static('public'))
 const bodyParser = require('body-parser'); //npm install body-parser
