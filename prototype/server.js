@@ -42,7 +42,7 @@ app.get('/index2', function(req,res){
     res.render('pages/index2')
 });
 app.get('/trending', function(req,res){
-    
+    if(!req.session.loggedin){res.redirect('/login');return;}
     res.render('pages/trending')
 });
 
