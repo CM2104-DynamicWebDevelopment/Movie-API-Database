@@ -83,6 +83,14 @@ app.get('/profile', function(req, res) {
     });
   
   });
+
+  app.get('/logout', function(req,res){
+    req.session.loggedin = false;
+  req.session.destroy();
+  res.redirect('/');
+
+    }
+  );
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
 
