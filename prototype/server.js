@@ -110,7 +110,7 @@ app.post('/dologin', function(req, res) {
   
   
       if(!result){
-        alert("wrong password")
+        
         res.redirect('/login');return}
   
   
