@@ -128,7 +128,7 @@ app.post('/dologin', function(req, res) {
     });
     
   });
-  app.post('/add', function (req, res) {
+  app.post('/adduser', function (req, res) {
     db.collection('quotes').save(req.body, function(err, result) {
       if (err) throw err;
       console.log('saved to database')
