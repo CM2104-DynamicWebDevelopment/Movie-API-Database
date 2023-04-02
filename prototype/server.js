@@ -60,6 +60,11 @@ app.get('/login', function(req,res){
 
 res.render('pages/login')
 });
+
+app.get('/add', function(req,res) {
+  res.render('pages/add')
+    });
+
 app.get('/profile', function(req, res) {
     if(!req.session.loggedin){res.redirect('/login');return;}
     
@@ -123,3 +128,10 @@ app.post('/dologin', function(req, res) {
     });
     
   });
+  app.post('/add', function (req, res) {
+    db.collection('quotes').save(req.body, function(err, result) {
+      if (err) throw err;
+      console.log('saved to database')
+      res.redirect('/')
+    })
+  })
