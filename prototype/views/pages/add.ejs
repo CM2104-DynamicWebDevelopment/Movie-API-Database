@@ -6,7 +6,7 @@
 </header>
 
 
-<body class="container">
+<body class="base">
     <header>
       <%- include('../partials/header') %>
     </header>
@@ -22,27 +22,38 @@
       <!-- submits to our /adduser route. -->
       <form action="/adduser" method="POST">
         <label>Name</label>
-        <input type="text" placeholder="title" name="title">
-        <input type="text" placeholder="first" name="first">
-        <input type="text" placeholder="last"  name="last">
+
+
+        <label for="Title">Title:</label>
+        <select name="Title" id="Title">
+          <option value="Ms">Ms</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Miss">Miss</option>
+        </select>
+
+
+
+        <input type="text" placeholder="First Name" name="first">
+        <input type="text" placeholder="Last Name"  name="last">
         </br><label>Login</label>
-        <input type="email" placeholder="me@example.com"    name="email">
-        <input type="text" placeholder="username"     name="username">
-        <input type="password" placeholder="password"  name="password">
+        <input type="email" placeholder="Me@example.com"    name="email">
+        <input type="text" placeholder="Username"     name="username">
+        <input type="password" placeholder="Password"  name="password">
         </br><label>Details</label>
-        <input type="text" placeholder="gender" name="gender">
-        <input type="datetime" placeholder="date of birth"    name="dob">
-        <input type="text" placeholder="nationality" name="nat">
+        <input type="text" placeholder="Gender" name="gender">
+        <input type="datetime" placeholder="Date Of Birth"    name="dob">
+        <input type="text" placeholder="Nationality" name="nat">
         </br><label>Location</label>
-        <input type="text" placeholder="street"   name="street">
-        <input type="text" placeholder="city"     name="city">
-        <input type="text" placeholder="state"    name="state">
-        <input type="text" placeholder="postcode" name="postcode">
+        <input type="text" placeholder="Street"   name="street">
+        <input type="text" placeholder="City"     name="city">
+        <input type="text" placeholder="State"    name="state">
+        <input type="text" placeholder="Postcode" name="postcode">
         </br><label>Pictures</label>
-          <input type="text" placeholder="large"     name="large">
-          <input type="text" placeholder="medium"    name="medium">
-          <input type="text" placeholder="thumbnail" name="thumbnail">
-        </br><button type="submit">Submit</button>
+        <input type="text" placeholder="Large"     name="large">
+        <input type="text" placeholder="Medium"    name="medium">
+        <input type="text" placeholder="Thumbnail" name="thumbnail">
+      </br><button type="submit">Submit</button>
       </form>
 
 
