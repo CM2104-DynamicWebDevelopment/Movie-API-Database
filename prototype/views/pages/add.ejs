@@ -45,15 +45,13 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<label>password :
-  <input name="password" id="password" type="password" />
-</label>
-<br>
-<label>confirm password:
-  <input type="password" name="confirm_password" id="confirm_password" />
-  <span id='message'></span>
-</label>
+<form>
+  <label>Password: <input name="password" type="password" onChange="onChange()" /> </label><br />
+  <label>Confirm : <input name="confirm"  type="password" onChange="onChange()" /> </label><br />
+  <input type="submit" />
+</form>
+
+
 
 
 
