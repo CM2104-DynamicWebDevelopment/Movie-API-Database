@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html>
 
-<head><%- include('../partials/trendingHead')%></head>
-
-
+<head><%- include('../partials/trendingHead')%>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="833087600807-tkkdl76sjb1icnhrl1p8fgkhjh3p33in.apps.googleusercontent.com">
+</head>
 <body class="sBase" >
+
     <header>
       <%- include('../partials/header')%>
     </header>
 
   <main>
-    <div class="loginbox">
-      <div class="container">
-      <h2>Login</h2>
-      <!-- simple login form, submits to our /dologin route -->
-      <form id="logingbox" action="/dologin" method="POST">
-        <input class="logintext" type="text" placeholder="Username" name="username"> <br><br>
-        <input class="logintext"type="password" placeholder="Password" name="password"><br>
-        <button type="submit">Login</button>
-        
-      </form>
 
-      <form action="/add">
-        <button type="submit">New User</button>
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="row">
+          <h2 style="text-align:center">Login with Social Media or Manually</h2>
+          <div class="vl">
+            <span class="vl-innertext">or</span>
+          </div>
+    
+          <div class="col">
+          
+          </div>
+    
+          <div class="col">
+            <div class="hide-md-lg">
+              <p>Or sign in manually:</p>
+            </div>
+    
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+          </div>
+          
+        </div>
       </form>
-
-</div>
     </div>
+    
+    <div class="bottom-container">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <div class="row">
+        <div class="col">
+          <a href="#" style="color:white" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+          <a href="#" style="color:white" class="btn">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+
+ 
+
   </main>
 
 
