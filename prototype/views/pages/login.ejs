@@ -2,11 +2,10 @@
 <html>
 
 <head><%- include('../partials/trendingHead')%>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="833087600807-tkkdl76sjb1icnhrl1p8fgkhjh3p33in.apps.googleusercontent.com">
-</head>
-<body class="sBase" >
+  <script src="https://apis.google.com/js/platform.js" async defer></script></head>
 
+
+<body class="sBase" >
     <header>
       <%- include('../partials/header')%>
     </header>
@@ -22,7 +21,15 @@
           </div>
     
           <div class="col">
-          
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+             </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+            </a>
+            <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+              </i> Login with Google+
+            </a>
           </div>
     
           <div class="col">
@@ -30,9 +37,9 @@
               <p>Or sign in manually:</p>
             </div>
     
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
+            <input type="text" name="username" placeholder="Username" required> 
+            <br>    <input type="password" name="password" placeholder="Password" required>
+            <br>  <input type="submit" value="Login"> 
           </div>
           
         </div>
@@ -40,18 +47,29 @@
     </div>
     
     <div class="bottom-container">
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <div class="row">
         <div class="col">
-          <a href="#" style="color:rgb(3, 0, 0)" class="btn">Sign up</a>
+          <a href="#" style="color:white" class="btn">Sign up</a>
         </div>
         <div class="col">
-          <a href="#" style="color:rgb(20, 3, 3)" class="btn">Forgot password?</a>
+          <a href="#" style="color:white" class="btn">Forgot password?</a>
         </div>
       </div>
     </div>
+</div>
+    </div>
 
- 
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
   </main>
 
