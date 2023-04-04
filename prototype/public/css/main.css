@@ -368,5 +368,12 @@ input[type=submit]:hover {
 .g-signin2{
 
 
-  width: 20%;
+  width: auto%;
+}
+
+
+.abcRioButton abcRioButtonLightBlue{
+
+
+  width: auto;
 }
