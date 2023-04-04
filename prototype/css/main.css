@@ -312,3 +312,10 @@ background-color: gray;
 .myclass + label:hover {
   background-color: purple;
 }
+
+.reg {
+
+width: 30%;
+height: 30%;
+margin-left: 40%;
+}
