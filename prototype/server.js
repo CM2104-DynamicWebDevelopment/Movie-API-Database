@@ -146,8 +146,8 @@ app.post('/dologin', function(req, res) {
   }
   
 
-  var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
+  var password = document.getElementsByClassName("password")
+  , confirm_password = document.getElementsByClassName("confirm_password");
 
 function validatePassword(){
   if(password.value != confirm_password.value) {
