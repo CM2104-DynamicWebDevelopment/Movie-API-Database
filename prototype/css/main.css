@@ -298,3 +298,17 @@ background-color: gray;
   line-height: 75px;
   font-size: 30px;
 }
+
+.myclass + label {
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.myclass:focus + label,
+.myclass + label:hover {
+  background-color: purple;
+}
