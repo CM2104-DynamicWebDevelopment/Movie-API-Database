@@ -319,3 +319,14 @@ width: 30%;
 height: 30%;
 margin-left: 40%;
 }
+
+
+#logingbox {
+
+width: 40%;
+height: auto;
+margin-left: 30%;
+background-color: gray;
+text-align: center;
+
+}
