@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<head><%- include('../partials/trendingHead')%></head>
+<head><%- include('../partials/trendingHead')%>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="833087600807-tkkdl76sjb1icnhrl1p8fgkhjh3p33in.apps.googleusercontent.com">
+
+</head>
 
 
 <body class="sBase" >
@@ -22,6 +26,7 @@
       </form>
 
       <form action="/add">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <button type="submit">New User</button>
       </form>
 
