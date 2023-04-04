@@ -34,6 +34,10 @@
                 <i class="fa fa-twitter fa-fw"></i> Login with Twitter
               </a>
               <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                <div class="google btn" data-onsuccess="onSignIn"></div>    
+
+
+
                 </i> Login with Google+
               </a>
             </div>
@@ -54,9 +58,13 @@
       
       <div class="bottom-container">
         <div class="row">
-          <div class="col">
-            <a href="#" style="color:white" class="btn">Sign up</a>
-          </div>
+
+
+       <form action="/add">
+        <button type="submit">Sign up</button>
+          </form>
+
+
           <div class="col">
             <a href="#" style="color:white" class="btn">Forgot password?</a>
           </div>
@@ -65,10 +73,7 @@
 
 
           
-      <form action="/add">
-        <button type="submit">Sign upr</button>
-          </form>
-
+      
 
 
 
@@ -79,10 +84,10 @@
 
 
 
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
 
 
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+ 
 
 </div>
     </div>
