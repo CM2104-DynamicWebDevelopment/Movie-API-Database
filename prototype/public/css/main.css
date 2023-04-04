@@ -225,3 +225,11 @@ text-align: center;
         text-align: center;
         
         }
+        .CenterB {
+
+          width: 80%;
+          height: auto;
+          margin-left: 10%;
+          border: solid red;
+          background-color: gray;
+          }
