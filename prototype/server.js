@@ -146,9 +146,12 @@ app.post('/dologin', function(req, res) {
   }
   
 
-  $('#password, #confirm_password').on('keyup', function () {
-    if ($('#password').val() == $('#confirm_password').val()) {
-      $('#message').html('Matching').css('color', 'green');
-    } else 
-      $('#message').html('Not Matching').css('color', 'red');
-  });
+  function onChange() {
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=confirm]');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Passwords do not match');
+    }
+  }
