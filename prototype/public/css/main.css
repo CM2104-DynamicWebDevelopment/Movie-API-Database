@@ -235,7 +235,8 @@ text-align: center;
 
 
           .loginbox {
-text-align: center;
+            pad: 20px;
+            text-align: center;
             width: 80%;
             height: auto;
             margin-left: 10%;
