@@ -227,9 +227,9 @@ text-align: center;
         }
         .CenterB {
 
-          width: 80%;
+  
           height: auto;
-          margin-left: 10%;
+ 
           background-color: rgb(204, 204, 204);
           }
 
@@ -383,5 +383,5 @@ input[type=submit]:hover {
 
 
 
-  
+
 }
