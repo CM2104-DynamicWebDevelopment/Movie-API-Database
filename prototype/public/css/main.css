@@ -270,6 +270,16 @@ input:hover,
   color: white;
 }
 
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
 /* Two-column layout */
 .col {
