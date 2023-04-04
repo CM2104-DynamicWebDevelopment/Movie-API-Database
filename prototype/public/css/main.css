@@ -228,7 +228,7 @@ text-align: center;
         .CenterB {
 
   
-          height: 100vh;
+          height: 100%;
  
           background-color: rgb(204, 204, 204);
           }
@@ -379,9 +379,9 @@ input[type=submit]:hover {
 }
 
 
-.SignB {
+button {
 
-
-
+width: 10%;
+border-radius: 10%;
 
 }
