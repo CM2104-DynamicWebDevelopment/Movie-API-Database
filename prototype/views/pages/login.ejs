@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head><%- include('../partials/trendingHead')%></head>
+<head><%- include('../partials/trendingHead')%>
+  <script src="https://apis.google.com/js/platform.js" async defer></script></head>
 
 
 <body class="sBase" >
@@ -36,9 +37,9 @@
               <p>Or sign in manually:</p>
             </div>
     
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
+            <input type="text" name="username" placeholder="Username" required> 
+            <br>    <input type="password" name="password" placeholder="Password" required>
+            <br>  <input type="submit" value="Login"> 
           </div>
           
         </div>
@@ -57,6 +58,19 @@
     </div>
 </div>
     </div>
+
+
+    <a href="#" onclick="signOut();">Sign out</a>
+    <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+    </script>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
   </main>
 
 
