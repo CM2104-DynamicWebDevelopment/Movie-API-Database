@@ -146,16 +146,12 @@ app.post('/dologin', function(req, res) {
   }
   
 
-  var password = document.getElementsByClassName("password")
-  , confirm_password = document.getElementsByClassName("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
+  function onChange() {
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=confirm]');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Passwords do not match');
+    }
   }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
