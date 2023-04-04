@@ -230,6 +230,15 @@ text-align: center;
           width: 80%;
           height: auto;
           margin-left: 10%;
-          border: solid red;
-          background-color: gray;
+          background-color: rgb(204, 204, 204);
           }
+
+
+          .loginbox {
+text-align: center;
+            width: 80%;
+            height: auto;
+            margin-left: 10%;
+            background-color: rgb(204, 204, 204);
+            }
+  
