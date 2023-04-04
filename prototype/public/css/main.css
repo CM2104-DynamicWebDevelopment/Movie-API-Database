@@ -345,3 +345,9 @@ input[type=submit]:hover {
     text-align: center;
   }
 }
+
+.g-signin2 {
+
+width: 400px;
+height: 400px;
+}
