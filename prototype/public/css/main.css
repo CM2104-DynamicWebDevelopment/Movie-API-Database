@@ -413,12 +413,29 @@ text-decoration: none; /* remove underline from anchors */
   width: 30%;
 }
 
+
+.col-sm-8 {
+
+  width: 30%;
+}
+
+
+.col-sm-4 {
+width: 60%;
+position: absolute;
+margin-left:20%;
+
+}
+
+.row {
+
+  margin-right: 0px;
+}
+
+
 .jumboS {
 
     font-size: medium;
     border: 1px solid red;
     text-align: center;
-    width: 40%;
-
-
 }

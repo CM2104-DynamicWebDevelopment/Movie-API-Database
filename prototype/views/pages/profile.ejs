@@ -21,8 +21,8 @@
             <!-- get the username -->
             <h1>Persoanl Details</h1>
             <br>
-            <h2>username: <br> <p> <%= user.login.username %> </p></h2>
-            <h2>password: <br><p>  <%= user.login.password %></p></h2>
+            <p> <%= user.login.username %> </p>
+
             <h2>
               <!-- get the gender-->
               Gender: <br><p>  <%= user.gender %></p>
@@ -52,29 +52,37 @@
                <h2> PostCode: <br><p>  <%= user.location.postcode %></p>
                </h2>
 
+
+
+               <div class="well">
+                <h3>Details</h3>
+                <img src="<%= user.picture.medium %>" class="img-circle" />
+                <h1>Hi <%= user.name.first %></h1>
+                <ul>
+
+      
+                  <!-- get the componemts of the address-->
+                  <li class="list-group-item">
+                    <%= user.location.street %>
+                  </li>
+                  <li class="list-group-item">
+                    <%= user.location.city%>
+                  </li>
+                  <li class="list-group-item">
+                    <%= user.location.state %>
+                  </li>
+                  <li class="list-group-item">
+                    <%= user.location.postcode %>
+                  </li>
+                </ul>
+              </div>
+
+
+
+
+
             </ul>
           </div>
-
-
-
-
-<div class="jumboS">
-
-
-       
-             
-  <h2> City: <br><p>  <%= user.location.city%></p>
-  </h2>
-
- <h2> State: <br><p>  <%= user.location.state %></p>
- </h2>
-
-  <h2> PostCode: <br><p>  <%= user.location.postcode %></p>
-  </h2>
-
-
-
-</div>
         </div>
 
 
@@ -87,26 +95,22 @@
 
 
         <div class="col-sm-4">
+  
+
+
+
           <div class="well">
-            <h3>Details</h3>
+            <h1>Hi <%= user.name.first %></h1>
             <img src="<%= user.picture.medium %>" class="img-circle" />
-            <h3>Address</h3>
-            <ul>
-              <!-- get the componemts of the address-->
-              <li class="list-group-item">
-                <%= user.location.street %>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.city%>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.state %>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.postcode %>
-              </li>
-            </ul>
+            <p> Home -   <%= user.location.street %> ,      <%= user.location.city%> ,  <%= user.location.state %> ,       <%= user.location.postcode %>        </p>
+
           </div>
+
+
+
+
+
+          
         </div>
 
 
