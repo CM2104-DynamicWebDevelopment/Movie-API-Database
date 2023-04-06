@@ -141,7 +141,7 @@ app.post('/dologin', function(req, res) {
   "email":req.body.email,
   "login":{"username":req.body.username,"password":req.body.password},
   "dob":req.body.dob,"registered":Date(),
-  "picture":{"large":"req.body.large","medium":"req.body.medium","thumbnail":"req.body.thumbnail"},
+  "picture":{"large":"x","medium":"x","thumbnail":"x"},
   "nat":req.body.nat}
   
   
