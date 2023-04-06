@@ -128,7 +128,7 @@ app.post('/dologin', function(req, res) {
     });
     
   });
-  app.post('/adduser', function(req, res) {
+  app.post('/add', function(req, res) {
     //check we are logged in
     if(!req.session.loggedin){res.redirect('/login');return;}
   
