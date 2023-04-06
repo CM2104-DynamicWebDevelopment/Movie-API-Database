@@ -20,39 +20,37 @@
             <img src="<%= user.picture.medium %>" class="img-circle" />
             <!-- get the username -->
             <h2>Persoanl Details</h2>
-            <p>username: <br> <%= user.login.username %></p>
-            <p>password: <br> <%= user.login.password %></p>
-            <p>
+            <h1>username: <br> <p> <%= user.login.username %> </p></h1>
+            <h1>password: <br><p>  <%= user.login.password %></p></h1>
+            <h1>
               <!-- get the gender-->
-              Gender: <br> <%= user.gender %>
-            </p>
-            <p>
+              Gender: <br><p>  <%= user.gender %></p>
+            </h1>
+            <h1>
               <!-- get the dob -->
-              Date Of Birth: <br> <%= user.dob %>
-            </p>
-            <p>
+              Date Of Birth: <br><p> <%= user.dob %></p>
+            </h1>
+            <h1>
               <!-- get the registration date-->
-              Date Of Registration:<br> <%= user.registered %>
-            </p>
+              Date Of Registration:<br> <p> <%= user.registered %></p>
+            </h1>
 
-            <ul>
+          
               <!-- get the componemts of the address-->
-              <li class="list-group-item">
-             <p> Street: <br>  <%= user.location.street %>
-             </p>
-              </li>
-              <li class="list-group-item">
-               <p> City: <br> <%= user.location.city%>
-               </p>
-              </li>
-              <li class="list-group-item">
-              <p> State: <br> <%= user.location.state %>
-              </p>
-              </li>
-              <li class="list-group-item">
-               <p> PostCode: <br> <%= user.location.postcode %>
-               </p>
-              </li>
+              
+             <h1> Street: <br><p>   <%= user.location.street %></p>
+             </h1>
+          
+             
+               <h1> City: <br><p>  <%= user.location.city%></p>
+               </h1>
+
+              <h1> State: <br><p>  <%= user.location.state %></p>
+              </h1>
+
+               <h1> PostCode: <br><p>  <%= user.location.postcode %></p>
+               </h1>
+
             </ul>
 
 
