@@ -407,8 +407,9 @@ text-decoration: none; /* remove underline from anchors */
 }
 
 .jumbotron {
+  background-color: #666;
   font-size: medium;
-  border: 1px solid red;
+  border: 1px solid black;
   text-align: center;
 }
 
