@@ -397,7 +397,7 @@ input[type=submit]:hover {
   margin: 5px 0;
   opacity: 0.85;
   height:36px;
-  width:auto;"
+  width:auto;
   font-size: 17px;
   line-height: 20px;
   text-decoration: none; /* remove underline from anchors */
