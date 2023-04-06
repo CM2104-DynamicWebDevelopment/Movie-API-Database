@@ -21,25 +21,26 @@
             <!-- get the username -->
             <h1>Persoanl Details</h1>
             <br>
-            <p> <%= user.login.username %> </p>
-
+            <p> Username: <br> <%= user.login.username %> </p>
+            <h2>Email <br> <p><%= user.email %></p></h2>
+             <!-- get the dob -->
+             Date Of Birth: <br><p> <%= user.dob %></p>
+            </h2>
+   
             <h2>
               <!-- get the gender-->
               Gender: <br><p>  <%= user.gender %></p>
             </h2>
-            <h2>
-              <!-- get the dob -->
-              Date Of Birth: <br><p> <%= user.dob %></p>
-            </h2>
-            <h2>Email <br> <p><%= user.email %></p></h2>
+      
+   
 
 
             <h2>
               <!-- get the registration date-->
-          Registered on :<br> <p> <%= user.registered %></p>
+          Registered on:<br> <p> <%= user.registered %></p>
             </h2>
 
-          
+            <p> Home Address- <br>  <%= user.location.street %> <br>      <%= user.location.city%> <br>  <%= user.location.state %> <br>      <%= user.location.postcode %>        </p>
              
 
 
@@ -64,8 +65,7 @@
           <div class="well">
             <h1>Hi <%= user.name.first %></h1>
             <img src="<%= user.picture.medium %>" class="img-circle" />
-            <p> Home -   <%= user.location.street %> ,      <%= user.location.city%> ,  <%= user.location.state %> ,       <%= user.location.postcode %>        </p>
-
+         
 
            <h1>Find your Closes Cinema</h1>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-FB665Kx5T8zGb378pZuHcvazxgRfl0&ehbc=2E312F" width="900" height="550"></iframe>
