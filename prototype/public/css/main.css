@@ -410,5 +410,16 @@ text-decoration: none; /* remove underline from anchors */
   font-size: medium;
   border: 1px solid red;
   text-align: center;
-  width: 40%;
+  width: 30%;
+}
+
+.jumboS {
+
+  .jumbotron {
+    font-size: medium;
+    border: 1px solid red;
+    text-align: center;
+    width: 40%;
+  }
+
 }
