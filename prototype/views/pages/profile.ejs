@@ -60,6 +60,73 @@
 
 
 
+
+
+
+
+        <div class="col-sm-4">
+          <div class="well">
+  
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-sm-4">
+          <div class="well">
+            <h3>Details</h3>
+            <img src="<%= user.picture.medium %>" class="img-circle" />
+            <h3>Address</h3>
+            <ul>
+              <!-- get the componemts of the address-->
+              <li class="list-group-item">
+                <%= user.location.street %>
+              </li>
+              <li class="list-group-item">
+                <%= user.location.city%>
+              </li>
+              <li class="list-group-item">
+                <%= user.location.state %>
+              </li>
+              <li class="list-group-item">
+                <%= user.location.postcode %>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
       </div>
     </main>
   
