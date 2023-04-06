@@ -65,24 +65,28 @@
   
         <div class="col-sm-4">
           <div class="well">
-            <h3>Details</h3>
-            <img src="<%= user.picture.medium %>" class="img-circle" />
-            <h3>Address</h3>
-            <ul>
-              <!-- get the componemts of the address-->
-              <li class="list-group-item">
-                <%= user.location.street %>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.city%>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.state %>
-              </li>
-              <li class="list-group-item">
-                <%= user.location.postcode %>
-              </li>
-            </ul>
+     
+            <section class="trelease">
+
+       
+              <h1 class="headers">Trending Movies Today</h1> 
+         
+              <p id="amount"></p>
+                    <div class="Search">
+              <form id="tgetfotm">
+                        
+                <input type="text" id="tpageNum">
+                <input type="submit" value="Submit">
+                    </div>
+          
+          
+            <div id="trending"></div>
+        
+            
+          
+              
+        
+            </section>
           </div>
         </div>
   
