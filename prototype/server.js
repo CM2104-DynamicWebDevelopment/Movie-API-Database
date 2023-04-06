@@ -62,7 +62,7 @@ res.render('pages/login')
 });
 
 app.get('/add', function(req,res) {
-  res.render('pages/add')
+  res.render('pages/adduser')
     });
 
 app.get('/profile', function(req, res) {
@@ -128,7 +128,7 @@ app.post('/dologin', function(req, res) {
     });
     
   });
-  app.post('/add', function(req, res) {
+  app.post('/adduser', function(req, res) {
     //check we are logged in
     if(!req.session.loggedin){res.redirect('/login');return;}
   
