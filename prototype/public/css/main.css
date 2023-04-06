@@ -280,6 +280,15 @@ text-align: center;
   text-decoration: none; /* remove underline from anchors */
 }
 
+
+.borders{
+
+border: 1px solid black;
+border-radius: 5px;;
+
+}
+
+
 input:hover,
 .btn:hover {
   opacity: 1;
