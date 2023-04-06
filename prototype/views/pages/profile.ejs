@@ -19,22 +19,48 @@
             <!-- get the medium picture -->
             <img src="<%= user.picture.medium %>" class="img-circle" />
             <!-- get the username -->
-            <h2>username: <%= user.login.username %></h2>
-            <h2>password: <%= user.login.password %></h2>
+            <h2>Persoanl Details</h2>
+            <p>username: <br> <%= user.login.username %></p>
+            <p>password: <br> <%= user.login.password %></p>
             <p>
               <!-- get the gender-->
-              gender: <%= user.gender %>
+              Gender: <br> <%= user.gender %>
             </p>
             <p>
               <!-- get the dob -->
-              date of birth: <%= user.dob %>
+              Date Of Birth: <br> <%= user.dob %>
             </p>
             <p>
               <!-- get the registration date-->
-              date of registration: <%= user.registered %>
+              Date Of Registration:<br> <%= user.registered %>
             </p>
 
-            
+            <ul>
+              <!-- get the componemts of the address-->
+              <li class="list-group-item">
+             <p> Street: <br>  <%= user.location.street %>
+             </p>
+              </li>
+              <li class="list-group-item">
+               <p> City: <br> <%= user.location.city%>
+               </p>
+              </li>
+              <li class="list-group-item">
+              <p> State: <br> <%= user.location.state %>
+              </p>
+              </li>
+              <li class="list-group-item">
+               <p> PostCode: <br> <%= user.location.postcode %>
+               </p>
+              </li>
+            </ul>
+
+
+
+
+
+
+
           </div>
         </div>
   
