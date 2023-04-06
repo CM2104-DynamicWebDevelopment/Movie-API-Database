@@ -405,3 +405,8 @@ font-size: 17px;
 line-height: 20px;
 text-decoration: none; /* remove underline from anchors */
 }
+
+.jumbotron {
+
+  border: 1px solid red;
+}
