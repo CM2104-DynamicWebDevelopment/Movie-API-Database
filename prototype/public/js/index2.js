@@ -56,14 +56,14 @@ $(function(){
             var year = jsondata.results[i].release_date
             var id = jsondata.results[i].id
             var overview = jsondata.results[i].overview
-        
+            var date = new Date(year).getTime()
             var vote  = jsondata.results[i].vote_average
             var voteC  = jsondata.results[i].vote_count
             var newTitle = undefined(title)
             var newImage = nullImage(poster)
            
             
-       
+            countDown(date, id)
             
     
             
@@ -83,7 +83,45 @@ $(function(){
 
         $("#resultsbox").html(hString)
     }
-    
+    function countDown(date, id){
+        // Set the date we're counting down to
+        var countDownDate = date ;
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // console.log(countDownDate)
+        // console.log(now)
+        
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        
+
+      
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById(id).innerHTML = "The Film is Out";
+        }
+        }, 1000);
+        
+
+        
+
+
+
+    }
     function undefined(title){
         if (typeof title === 'undefined'){
             return "No Title"
