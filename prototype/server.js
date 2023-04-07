@@ -62,7 +62,7 @@ res.render('pages/login')
 });
 
 app.get('/add', function(req,res) {
-  res.render('pages/adduser')
+  res.render('pages/add')
     });
 
 app.get('/profile', function(req, res) {
