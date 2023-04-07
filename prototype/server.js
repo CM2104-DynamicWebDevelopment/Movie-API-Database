@@ -111,7 +111,10 @@ app.post('/dologin', function(req, res) {
   
   
     db.collection('people').findOne({"login.username":uname}, function(err, result) {
-      if (err) throw err;
+      if (err) {
+
+        console.log(err)
+      };
   
   
       if(!result){
