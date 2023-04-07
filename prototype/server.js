@@ -144,7 +144,7 @@ app.post('/dologin', function(req, res) {
       "email":req.body.email,
       "login":{"username":req.body.username,"password":req.body.password},
       "dob":req.body.dob,"registered":Date(),
-      "picture":{"large":"prototype\public\wallhaven-v9poql.jpg","medium":"prototype\public\wallhaven-v9poql.jpg","thumbnail":"prototype\public\wallhaven-v9poql.jpg"},
+      "picture":{"large":"wallhaven-v9poql.jpg","medium":"wallhaven-v9poql.jpg","thumbnail":"wallhaven-v9poql.jpg"},
       "nat":req.body.nat}
   
   
