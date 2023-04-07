@@ -62,7 +62,7 @@ res.render('pages/login')
 });
 
 app.get('/add', function(req,res) {
-  res.render('pages/add')
+  res.render('pages/adduser')
     });
 
 app.get('/profile', function(req, res) {
@@ -149,7 +149,7 @@ app.post('/dologin', function(req, res) {
   
   
   //once created we just run the data string against the database and all our new data will be saved/
-    db.collection('people').save(req.body, function(err, result) {
+    db.collection('people').save(datatostore, function(err, result) {
       if (err) {
         console.log(err)
       };
