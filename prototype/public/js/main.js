@@ -47,7 +47,7 @@ $(function(){
 
     function printJSON (jsondata){
         //string to contain the html code to inject
-        console.log(jsondata.total_results)
+        console.log(jsondata)
 
         var hString = "";
         for (var i=0; i<10; i++){
