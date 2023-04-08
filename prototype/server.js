@@ -164,6 +164,33 @@ app.post('/dologin', function(req, res) {
       res.redirect('/login')
     })
   });
+  app.post('/delete', function (req, res) {
+    //check we are logged in.
+    if (!req.session.loggedin) {
+      res.redirect('/login');
+      return;
+    }
+    //if so get the username variable
+    var uname = req.session.currentuser;
+  
+    //check for the username added in the form, if one exists then you can delete that doccument
+    db.collection('people').deleteOne({
+      "login.username": uname
+    }, function (err, result) {
+      //if there is an error doing the user search
+      if(err){
+        //render the bad error page and passdown the error
+        //res.render('pages/baderror',{error:err} );
+
+        console.log(err);
+        return;
+      }
+      //when complete redirect to the index
+      req.session.loggedin = false;
+      req.session.destroy();
+      res.redirect('/login');
+    });
+  });
 
 
   function onSignIn(googleUser) {
