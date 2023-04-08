@@ -107,7 +107,9 @@ $(function(){
         
         
 
-      
+        // Display the result in the element with id="demo"
+        document.getElementById(id).innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
 
         // If the count down is finished, write some text
         if (distance < 0) {
@@ -118,6 +120,17 @@ $(function(){
         
 
         
+
+
+
+    }
+    function undefined(title){
+        if (typeof title === 'undefined'){
+            return "No Title"
+        }else{return title}
+
+    
+
 
 
 
