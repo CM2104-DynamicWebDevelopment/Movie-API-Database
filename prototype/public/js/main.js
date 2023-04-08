@@ -50,7 +50,7 @@ $(function(){
         console.log(jsondata.totalResults)
 
         var hString = "";
-        for (var i=0; i<10; i++){
+        for (var i=0; i<jsondata.totalResults; i++){
             
             var title = jsondata.Search[i].Title;
             
