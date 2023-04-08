@@ -30,12 +30,18 @@ app.use(bodyParser.urlencoded({
 var db;
 
 //this is our connection to the mongo db, ts sets the variable db as our database
-MongoClient.connect(url, function(err, database) {
-  if (err) throw err;
-  db = database;
+MongoClient.connect(url, function (err, database) {
+  if(!err){
+    db = database; 
+  }
+  else{
+    console.log("error connecting to databse "+err)
+  }
   app.listen(8080);
   console.log('listening on 8080');
-});
+ 
+}); 
+
 
 app.get('/index2', function(req,res){
     if(!req.session.loggedin){res.redirect('/login');return;}
