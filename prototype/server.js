@@ -89,7 +89,12 @@ app.get('/profile', function(req, res) {
     
    
     db.collection('people').findOne({"login.username": uname}, function(err, result) {
-      if (err) throw err;
+      if (err) {
+        console.log(err)
+        res.render('pages/error',{
+          img:errorImage
+        })
+      };
     
   
       console.log(result)
