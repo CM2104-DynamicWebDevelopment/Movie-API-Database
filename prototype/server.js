@@ -7,7 +7,7 @@ const session = require('express-session'); //npm install express-session
 var app = express();
 app.use(express.static('public'))
 const bodyParser = require('body-parser'); //npm install body-parser
-
+var errorImage = "prototype\public\wallhaven-v9poql.jpg"
 //code to tell express we want to read POSTED forms
 app.use(bodyParser.urlencoded({
     extended: true
@@ -35,6 +35,9 @@ MongoClient.connect(url, function (err, database) {
     db = database; 
   }
   else{
+    res.render('pages/error',{
+      img:errorImage
+    })
     console.log("error connecting to databse "+err)
   }
   app.listen(8080);
@@ -57,6 +60,12 @@ app.get('/trending', function(req,res){
 app.get('/', function(req, res) {
  res.render('pages/index');
 });
+
+app.get('/error', function(req,res){
+  res.render('pages/error',{
+    img:errorImage
+  })
+})
 app.get('/index', function(req,res){
     res.render('pages/index')
 });
