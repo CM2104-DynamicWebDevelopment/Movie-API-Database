@@ -12,10 +12,6 @@
 }
 
 
-hr {
-
-  color:black;
-}
 
 .title{
   
@@ -62,6 +58,10 @@ p{
   float: left;
   width: 50%;
 
+}
+
+hr {
+  color: black !important;
 }
 
 
