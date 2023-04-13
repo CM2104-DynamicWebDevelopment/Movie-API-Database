@@ -61,7 +61,7 @@ p{
 }
 
 hr {
-  color: black !important;
+  border-top: 1px solid black !important;
 }
 
 
