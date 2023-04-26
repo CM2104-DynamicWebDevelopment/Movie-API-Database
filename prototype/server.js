@@ -125,6 +125,14 @@ app.post('/addCinema', function(req,res){
     cinema_name: req.body.cinema,
     cinema_adress : req.body.cAdress
   }
+  var uname = req.session.currentuser;
+  db.collection('people').updateOne({"login.username":uname},{$set:cinema}, function(err, result){
+    if (err){
+      console.log(err)
+    } 
+    
+    console.log('updated')
+  })
 
 
 
