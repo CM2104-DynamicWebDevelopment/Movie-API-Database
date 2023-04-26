@@ -64,6 +64,11 @@
             
             <h2> Your Favourite cinema: <%= user.cinema_name%></h1>
             <h2> Adress:<%= user.cinema_adress%> </h1>
+              <form action="/addCinema" method="POST">
+                <input type="text" placeholder="Cinema Name" name="cinema" class="Rag"  required >    <br> 
+                <input type="text" placeholder="Cinema Adress" name="cAdress" class="Rag"  required >    <br> 
+                <button type="submit" class="registerbtn">Add Cinema</button> <br>
+              </form>
             
            
 
