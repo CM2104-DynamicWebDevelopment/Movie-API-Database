@@ -131,7 +131,8 @@ app.post('/addCinema', function(req,res){
       console.log(err)
     } 
     
-    console.log('updated')
+    console.log('updated');
+    res.redirect('/profile');
   })
 
 
