@@ -119,6 +119,17 @@ app.get('/profile', function(req, res) {
   );
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
+//adding a favourite cinema
+app.post('/addCinema', function(req,res){
+  var cinema = {
+    cinema_name: req.body.cinema,
+    cinema_adress : req.body.cAdress
+  }
+
+
+
+})
+
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
