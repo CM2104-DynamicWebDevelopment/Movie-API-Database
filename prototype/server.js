@@ -125,11 +125,11 @@ app.get('/profile', function(req, res) {
 
 //adding a favourite cinema
 app.post('/upass', function(req,res){
-  var cinema = {password : req.body.cinema}
+  var cinema = {password : req.body.password}
     
   
   var uname = req.session.currentuser;
-  db.collection('people').updateOne({"login.username":uname},{$set:login.cinema}, function(err, result){
+  db.collection('people').updateOne({"login.username":uname},{$set:{"login.password":cinema}}, function(err, result){
     if (err){
       console.log(err)
     } 
