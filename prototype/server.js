@@ -127,16 +127,41 @@ app.get('/profile', function(req, res) {
 app.post('/upass', function(req,res){
   var cinema = {password : req.body.password}
     
+  var passdown = req.bofy.oldpassword
+  var uname = req.body.username;
   
-  var uname = req.session.currentuser;
-  db.collection('people').updateOne({"login.username":uname},{$set:{"login.password":cinema}}, function(err, result){
-    if (err){
+  db.collection('people').findOne({"login.username":uname}, function(err, result) {
+    if (err) {
+
       console.log(err)
-    } 
-    
-    console.log('updated');
-    res.redirect('/profile');
-  })
+    };
+
+
+    if(!result){
+      
+      res.redirect('/update');return}
+
+
+
+    if(result.login.password == pword){
+      
+      
+      db.collection('people').updateOne({"login.username":uname},{$set:{"login.password":cinema}}, function(err, result){
+        if (err){
+          console.log(err)
+        } 
+        
+        console.log('updated');
+        
+      });
+      
+      
+      res.redirect('/login'); }
+
+
+
+    else{res.redirect('/update')}
+  });
 
   
 
