@@ -124,6 +124,24 @@ app.get('/profile', function(req, res) {
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
 //adding a favourite cinema
+app.post('/upass', function(req,res){
+  var cinema = {password : req.body.cinema}
+    
+  
+  var uname = req.session.currentuser;
+  db.collection('people').updateOne({"login.username":uname},{$set:login.cinema}, function(err, result){
+    if (err){
+      console.log(err)
+    } 
+    
+    console.log('updated');
+    res.redirect('/profile');
+  })
+
+  
+
+
+})
 app.post('/addCinema', function(req,res){
   var cinema = {
     cinema_name: req.body.cinema,
@@ -139,6 +157,7 @@ app.post('/addCinema', function(req,res){
     res.redirect('/profile');
   })
 
+  
 
 
 })
