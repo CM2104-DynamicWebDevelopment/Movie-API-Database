@@ -214,7 +214,6 @@ text-align: center;
     font-size: 1vw;
     color: rgb(0, 252, 0);
     text-align: center;
-    
       }
     
 
@@ -235,19 +234,11 @@ text-align: center;
         
         }
         .CenterB {
-
-  
           height: 100vh;
-
-      
           }
 
-
-
-
-          .SignB {
-            margin-top: 10px;
-            
+           .SignB {
+            margin-top: 10px;    
             }
 
 

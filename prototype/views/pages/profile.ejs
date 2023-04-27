@@ -39,45 +39,18 @@
             </ul>
 
 
-            <form id="delete" action="/delete" method="POST">
-              
+            <form id="delete" action="/delete" method="POST">              
               <button type="submit">Delete Profile</button>
             </form>
-
-
-          </div>
-
-
-
-
-          
-        </div>
-
-
-
-
-
-
-
-
-
+          </div>  
+      </div>
 
         <div class="col-sm-8">
-  
-
-
-
           <div class="well">
             <h1>Hi <%= user.name.first %></h1>
- 
-         
-
            <h1>Find your Closest Cinema</h1>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-FB665Kx5T8zGb378pZuHcvazxgRfl0&ehbc=2E312F" width="500" height="300"></iframe> 
-            
 
-
-            
             <h2> Your Favourite cinema:  <%= user.cinema_name%></h1>
             <h2> Adress:   <%= user.cinema_adress%> </h1>
               <form action="/addCinema" method="POST">
@@ -89,30 +62,7 @@
               </form>
             
             </div>
-
-
-
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
         </div>
       </div>
     </main>
