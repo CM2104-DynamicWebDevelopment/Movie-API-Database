@@ -64,10 +64,11 @@
             
 
 
-            <div id="favcin"></div>
+            
             <h2> Your Favourite cinema:  <%= user.cinema_name%></h1>
             <h2> Adress:   <%= user.cinema_adress%> </h1>
               <form action="/addCinema" method="POST">
+                <div id="favcin">
                 <h1>Update Favourite Cinema</h1> <br> 
                 <input type="text" placeholder="Cinema Name" name="cinema" class="Rag"  required >    <br> 
                 <input type="text" placeholder="Cinema Adress" name="cAdress" class="Rag"  required >    <br> 
