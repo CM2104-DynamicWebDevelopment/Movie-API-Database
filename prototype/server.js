@@ -127,7 +127,7 @@ app.get('/profile', function(req, res) {
 app.post('/upass', function(req,res){
   var cinema = {password : req.body.password}
     
-  var passdown = req.bofy.oldpassword
+  var password = req.bofy.oldpassword
   var uname = req.body.username;
   
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
@@ -143,7 +143,7 @@ app.post('/upass', function(req,res){
 
 
 
-    if(result.login.password == pword){
+    if(result.login.password == password){
       
       
       db.collection('people').updateOne({"login.username":uname},{$set:{"login.password":cinema}}, function(err, result){
