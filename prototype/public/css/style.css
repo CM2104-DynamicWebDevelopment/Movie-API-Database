@@ -1,0 +1,13 @@
+hr {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #000000;
+}
+
+#favcin {
+border: 1px solid red;
+width: 10%;
+height: 10%;
+}

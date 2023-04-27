@@ -24,7 +24,7 @@
             <br>
             <h2>  Username: <br> <p><%= user.login.username %> </p></h2> 
              <!-- get the Email -->
-            <h2>  Email:    <br> <p><%= user.email %></p></h2>
+            <h2>  Email:    <br> <p><%= user.email %> </p></h2>
              <!-- get the dob -->
             <h2>  Date Of Birth: <br><p> <%= user.dob %></p> </h2>
             <!-- get the gender-->
@@ -62,6 +62,9 @@
            <h1>Find your Closest Cinema</h1>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1-FB665Kx5T8zGb378pZuHcvazxgRfl0&ehbc=2E312F" width="500" height="300"></iframe> 
             
+
+
+            <div id="favcin"></div>
             <h2> Your Favourite cinema:  <%= user.cinema_name%></h1>
             <h2> Adress:   <%= user.cinema_adress%> </h1>
               <form action="/addCinema" method="POST">
@@ -71,16 +74,16 @@
                 <button type="submit" class="registerbtn">Add Cinema</button> <br>
               </form>
             
-           
+            </div>
+
 
 
           </div>
-
+<div id="favcin">
           <form action="/delete" method="POST">
               
             <button type="submit">Delete Profile</button>
           </form>
-
 
 
 
