@@ -80,6 +80,10 @@ app.get('/add', function(req,res) {
   res.render('pages/add')
     });
 
+app.get('/update', function(req,res) {
+      res.render('pages/update')
+        });
+
 app.get('/profile', function(req, res) {
     if(!req.session.loggedin){res.redirect('/login');return;}
     
