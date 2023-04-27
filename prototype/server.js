@@ -30,12 +30,12 @@ app.use(bodyParser.urlencoded({
 var db;
 
 //this is our connection to the mongo db, ts sets the variable db as our database
-MongoClient.connect(url, function (err, database) {
+MongoClient.connect(url, function (err, database) { 
   if(!err){
     db = database; 
   }
-  else{
-    res.render('pages/error',{
+  else{ // renders the error page in case the database does not exist
+    res.render('pages/error',{ 
       img:errorImage
     })
     console.log("error connecting to databse "+err)
@@ -45,45 +45,49 @@ MongoClient.connect(url, function (err, database) {
  
 }); 
 
-
+// upcoming movies page get function
 app.get('/index2', function(req,res){
     if(!req.session.loggedin){res.redirect('/login');return;}
     res.render('pages/index2')
 });
+// functions returns trending page
 app.get('/trending', function(req,res){
     if(!req.session.loggedin){res.redirect('/login');return;}
     
     res.render('pages/Trending')
 });
 
-// about page
+// returns search page as the initial page
 app.get('/', function(req, res) {
  res.render('pages/index');
 });
-
+// testing the error page
 app.get('/error', function(req,res){
   res.render('pages/error',{
     img:errorImage
   })
 })
+// returns search page as a destination
 app.get('/index', function(req,res){
     res.render('pages/index')
 });
-
+// returns the login page
+// if the user already logged in then instead it logs the user out and redirects the user to the logout function
 app.get('/login', function(req,res){
     if(req.session.loggedin){res.redirect('/logout');return;}
 
 res.render('pages/login')
 });
-
+// returns page to add new user
 app.get('/add', function(req,res) {
   res.render('pages/add')
     });
-
+//returns page to update a user
 app.get('/update', function(req,res) {
       res.render('pages/update')
         });
-
+// returns the profile page
+//
 app.get('/profile', function(req, res) {
     if(!req.session.loggedin){res.redirect('/login');return;}
     
@@ -91,7 +95,7 @@ app.get('/profile', function(req, res) {
     var uname = req.session.currentuser;
     console.log(req.session.currentuser)
     
-   
+   //finds the username information in the database of the user logged which is logged in and returns the information
     db.collection('people').findOne({"login.username": uname}, function(err, result) {
       if (err) {
         console.log(err)
@@ -104,7 +108,7 @@ app.get('/profile', function(req, res) {
       console.log(result)
      
   
-  
+  //returns the profile page with the information from the database
       res.render('pages/profile', {
         
         user: result
@@ -113,7 +117,7 @@ app.get('/profile', function(req, res) {
     });
   
   });
-
+// this function destroys the logged is session and redirects to the home page
   app.get('/logout', function(req,res){
     req.session.loggedin = false;
   req.session.destroy();
@@ -129,23 +133,23 @@ app.post('/upass', function(req,res){
     
   var password = req.body.oldpassword
   var uname = req.body.username;
-  
+  // finds the user data
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
-    if (err) {
-
+    if (err) { // error path 
+// loggs in  the error in case occured
       console.log(err)
     };
 
 
-    if(!result){
+    if(!result){ // if there is no profile then the page will just reset
       
       res.redirect('/update');return}
 
 
 
-    if(result.login.password == password){
+    if(result.login.password == password){ // checks the password
       
-      
+      // uses the data provided by the forms to update the password
       db.collection('people').updateOne({"login.username":uname},{$set:{"login.password":cinema}}, function(err, result){
         if (err){
           console.log(err)
@@ -160,13 +164,14 @@ app.post('/upass', function(req,res){
 
 
 
-    else{res.redirect('/update')}
+    else{res.redirect('/update')}// if the password was wrong then the page reloads
   });
 
   
 
 
 })
+// adds the favourite cinema to the database
 app.post('/addCinema', function(req,res){
   var cinema = {
     cinema_name: req.body.cinema,
@@ -220,7 +225,7 @@ app.post('/dologin', function(req, res) {
     
   });
   app.post('/adduser', function(req, res) {
-    //check we are logged in
+   
     
   
     //we create the data string from the form components that have been passed in
@@ -275,12 +280,6 @@ app.post('/dologin', function(req, res) {
   });
 
 
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
+ 
   
 
