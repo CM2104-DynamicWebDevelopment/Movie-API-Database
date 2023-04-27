@@ -8,6 +8,8 @@ hr {
 
 #favcin {
 border: 1px solid red;
-width: 10%;
-height: 10%;
+width: auto;
+height: auto;
+margin: top -30%;
+margin-left: 50%;
 }
