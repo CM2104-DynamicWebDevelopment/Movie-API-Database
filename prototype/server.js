@@ -127,7 +127,7 @@ app.get('/profile', function(req, res) {
 app.post('/upass', function(req,res){
   var cinema = {password : req.body.password}
     
-  var password = req.bofy.oldpassword
+  var password = req.body.oldpassword
   var uname = req.body.username;
   
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
