@@ -125,7 +125,7 @@ app.get('/profile', function(req, res) {
 
 //adding a favourite cinema
 app.post('/upass', function(req,res){
-  var cinema = {password : req.body.password}
+  var cinema =  req.body.password
     
   var password = req.body.oldpassword
   var uname = req.body.username;
