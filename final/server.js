@@ -74,7 +74,7 @@ app.get('/index', function(req,res){
 // returns the login page
 // if the user already logged in then instead it logs the user out and redirects the user to the logout function
 app.get('/login', function(req,res){
-    if(req.session.loggedin){res.redirect('/logout');return;}
+    if(req.session.loggedin){res.redirect('/');return;}
 
 res.render('pages/login')
 });
