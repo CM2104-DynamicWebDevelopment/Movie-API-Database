@@ -294,4 +294,11 @@ app.get('/logout', function(req, res) {
   res.render('pages/logout'); // render logout page
 });
 
+app.post('/delete-profile', function(req, res) {
+  // delete the user's profile here
+  // ...
+
+  // render the profile deleted page
+  res.render('profile-deleted');
+});
   
