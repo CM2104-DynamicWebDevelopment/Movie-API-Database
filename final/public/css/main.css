@@ -1,9 +1,9 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 .headers{
   font-style:oblique;
+  color: rgb(255, 234, 0);
   margin-left: 37%;
 }
-
 #amount{
   font-size: x-large;
   text-align: left;

@@ -128,6 +128,7 @@ app.get('/profile', function(req, res) {
   );
   // logout page
 app.get('/plogout', function(req, res) {
+  
   res.render('pages/logout'); // render logout page
 });
 app.get('/delete-profile', function(req, res) {
