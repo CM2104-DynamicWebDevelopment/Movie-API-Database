@@ -119,6 +119,7 @@ app.get('/profile', function(req, res) {
   });
 // this function destroys the logged is session and redirects to the home page
   app.get('/logout', function(req,res){
+    
     req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/plogout');
