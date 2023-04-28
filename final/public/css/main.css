@@ -261,7 +261,7 @@ text-align: center;
   color: black;
   width: 100%;
   padding: 12px;
-  border: none;
+  border: 1px solid black;
   border-radius: 4px;
   margin: 5px 0;
   opacity: 0.85;
