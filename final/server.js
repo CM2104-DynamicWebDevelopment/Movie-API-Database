@@ -127,6 +127,8 @@ app.get('/profile', function(req, res) {
   );
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
+
+
 //adding a favourite cinema
 app.post('/upass', function(req,res){
   var cinema =  req.body.password
@@ -280,6 +282,16 @@ app.post('/dologin', function(req, res) {
   });
 
 
- 
+// logout page
+app.get('/logout', function(req, res) {
+  if (!req.session.loggedin) { // if user is not logged in, redirect to login page
+    res.redirect('/login');
+    return;
+  }
   
+  req.session.loggedin = false; // mark user as logged out
+  req.session.destroy(); // destroy session data
+  res.render('pages/logout'); // render logout page
+});
 
+  
