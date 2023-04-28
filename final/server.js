@@ -121,10 +121,22 @@ app.get('/profile', function(req, res) {
   app.get('/logout', function(req,res){
     req.session.loggedin = false;
   req.session.destroy();
-  res.redirect('/');
+  res.redirect('/plogout');
 
     }
   );
+  // logout page
+app.get('/plogout', function(req, res) {
+  res.render('pages/logout'); // render logout page
+});
+app.get('/delete-profile', function(req, res) {
+  // delete the user's profile here
+  // ...
+
+  // render the profile deleted page
+  res.render('pages/profiledelete');
+});
+  
 //********** POST ROUTES - Deal with processing data from forms ***************************
 
 
@@ -277,28 +289,11 @@ app.post('/dologin', function(req, res) {
       //when complete redirect to the index
       req.session.loggedin = false;
       req.session.destroy();
-      res.redirect('/login');
+      res.redirect('/delete-profile');
     });
   });
 
 
-// logout page
-app.get('/logout', function(req, res) {
-  if (!req.session.loggedin) { // if user is not logged in, redirect to login page
-    res.redirect('/login');
-    return;
-  }
-  
-  req.session.loggedin = false; // mark user as logged out
-  req.session.destroy(); // destroy session data
-  res.render('pages/logout'); // render logout page
-});
 
-app.post('/delete-profile', function(req, res) {
-  // delete the user's profile here
-  // ...
 
-  // render the profile deleted page
-  res.render('profile-deleted');
-});
-  
+
