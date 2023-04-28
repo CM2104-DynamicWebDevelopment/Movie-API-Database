@@ -128,7 +128,9 @@ app.get('/profile', function(req, res) {
   );
   // logout page
 app.get('/plogout', function(req, res) {
+  if(!req.session.loggedin){res.redirect('/login');return;}
   
+
   res.render('pages/logout'); // render logout page
 });
 app.get('/delete-profile', function(req, res) {
